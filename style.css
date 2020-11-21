@@ -1,0 +1,15 @@
+body, #calendar-container {
+  margin: 0;
+}
+
+div {
+  border: 1px solid black;
+}
+
+.date {
+  text-align: center;
+}
+
+#calendar {
+  background-color: rgba(0, 0, 255, 0.5);
+}
