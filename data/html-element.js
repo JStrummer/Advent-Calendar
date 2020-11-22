@@ -1,5 +1,8 @@
 'use strict'
 
+var appContainer = document.querySelector('#app');
+var header = document.querySelector('#header');
+var background = document.querySelector('#background');
 var calendarContainer = document.querySelector('#calendar-container');
 var calendar = document.querySelector("#calendar");
 var currentDate = document.querySelector('#current-date');

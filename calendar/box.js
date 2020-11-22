@@ -1,7 +1,7 @@
 'use strict'
 
 function box (element, date) {
-  var date = new Date(2020, 10, date);
+  var date = new Date(2020, 11, date);
   var isOpen = false;
   var isLocked = true;
 

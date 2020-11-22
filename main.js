@@ -10,7 +10,6 @@ if (state) {
   });
 }
 
-var data = checkData();
-
 updateTimer();
-animBackground();
+resize();
+window.onresize = resize;
