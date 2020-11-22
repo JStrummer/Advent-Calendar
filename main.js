@@ -1,5 +1,6 @@
 'use strict'
 
+
 if (state) {
   boxes.forEach((box, i) => {
     box.unlock();
@@ -8,5 +9,8 @@ if (state) {
     }
   });
 }
+
+var data = checkData();
+
 updateTimer();
 animBackground();

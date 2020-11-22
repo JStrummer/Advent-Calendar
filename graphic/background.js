@@ -2,6 +2,8 @@
 function animBackground () {
 
 var background = document.querySelector('#background');
+background.width = calendarContainer.offsetWidth;
+background.height = calendarContainer.offsetHeight;
 var ctx = background.getContext('2d');
 
 function snowFlake (maxX, maxY) {

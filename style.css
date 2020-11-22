@@ -1,10 +1,19 @@
-#background {
-  display: none;
+body {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body,
+#calendar-container,
+#header {
+  margin: 0;
 }
 
-body,
+#header {
+  height: 20vh;
+}
+
 #calendar-container {
-  margin: 0;
+  height: 80vh;
 }
 
 div {
@@ -18,11 +27,17 @@ div {
 
 /* defining grid*/
 #calendar {
+  width: 80%;
+  height: 64%;
+  position: fixed;
+  z-index: 1;
+  top: 30%;
+  left: 10%;
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(4, 1fr);
   gap: 5px;
-  background-color: rgba(0, 0, 255, 0.5);
+  background-color: rgba(0, 0, 255, 1);
 }
 
 /* styling box statuses */

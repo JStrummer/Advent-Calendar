@@ -1,5 +1,6 @@
 'use strict'
 
+var calendarContainer = document.querySelector('#calendar-container');
 var calendar = document.querySelector("#calendar");
 var currentDate = document.querySelector('#current-date');
 var countdown = document.querySelector('#countdown');
