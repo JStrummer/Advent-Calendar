@@ -14,9 +14,13 @@ for (let i = 1; i < 25; i++) {
   }
  }
 
-var b = boxes[0];
-
-function openBox(evt){
-  var index = evt.target.textContent - 1;
-  boxes[index].open();
+function openBox (evt) {
+  if (state) {
+    var box = evt.target;
+    var index = box.textContent - 1;
+    boxes[index].open();
+    state = saveState();
+    localStorage.setItem('state', state);
+    box.removeEventListener('click', openBox);
+  }
 }

@@ -1,15 +1,18 @@
 'use strict'
 
-function box (element, date, open = false) {
+function box (element, date) {
   var date = new Date(2020, 10, date);
-  var isOpen = open;
-  var isLocked = locked;
+  var isOpen = false;
+  var isLocked = true;
 
   element.textContent = date.getDate();
 
   return {
     get isOpen () {
       return isOpen;
+    },
+    get isLocked () {
+      return isLocked;
     },
     get date() {
       return date;
