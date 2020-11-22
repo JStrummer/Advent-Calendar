@@ -2,7 +2,8 @@
   display: none;
 }
 
-body, #calendar-container {
+body,
+#calendar-container {
   margin: 0;
 }
 
@@ -10,14 +11,43 @@ div {
   border: 1px solid black;
 }
 
-.date {
+.date,
+#greetings {
   text-align: center;
 }
 
+/* defining grid*/
 #calendar {
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(4, 1fr);
   gap: 5px;
   background-color: rgba(0, 0, 255, 0.5);
+}
+
+/* styling box statuses */
+#calendar .unlocked {
+  border-color: red;
+}
+
+#calendar .open {
+  background-color: green;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form {
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+}
+
+li {
+  display: inline-block;
 }

@@ -1,0 +1,2 @@
+[1122/042500.929:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
+[1122/042500.957:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\yfall\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\38858739-d715-457f-97f6-9ffa4d322fae: El sistema no puede encontrar la ruta especificada. (0x3)

@@ -7,25 +7,42 @@
   </head>
   <body>
     <div id="app">
-    <div id="date-container">
-      <div class="date">
-        OGGI E' IL <span id="current-date"></span>
+      <div id="greetings">
+        CIAO
       </div>
-      <div class="date">
-        MANCANO <span id="countdown"></span> A NATALE
+      <form id="form_greetings" action="index.html" method="post">
+        <ul>
+          <li>
+            <label for="name">COME TI CHIAMI?</label>
+            <input type="text" id="name" name="userName" required>
+          </li>
+          <li>
+            <button id="submitNameBtn" type="button">CONFERMA</button>
+          </li>
+        </ul>
+      </form>
+      <div id="date-container">
+        <div class="date">
+          OGGI E' IL <span id="current-date"></span>
+        </div>
+        <div class="date">
+          MANCANO <span id="countdown"></span> A NATALE
+        </div>
       </div>
-    </div>
-    <div id="calendar-container">
-      <canvas id="background" width="300" height="300"></canvas>
-      <div id="calendar">
-        
+      <div id="calendar-container">
+        <canvas id="background" width="300" height="300"></canvas>
+        <div id="calendar">
+
+        </div>
       </div>
-    </div>
     </div>
 
+    <script src="data/html-element.js" charset="utf-8"></script>
+    <script src="data/data.js" charset="utf-8"></script>
     <script src="countdown.js" charset="utf-8"></script>
-    <script src="background.js" charset="utf-8"></script>
-    <script src="calendar.js" charset="utf-8"></script>
+    <script src="graphic/background.js" charset="utf-8"></script>
+    <script src="calendar/box.js" charset="utf-8"></script>
+    <script src="calendar/calendar.js" charset="utf-8"></script>
     <script src="main.js" charset="utf-8"></script>
   </body>
 </html>
