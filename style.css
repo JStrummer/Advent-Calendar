@@ -62,7 +62,7 @@ li {
 
 /* styling box statuses */
 .box {
-  background-color: blue;
+  /*background-color: blue;*/
   border: none;
   border-radius: 50%;
 }
