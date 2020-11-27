@@ -1,13 +1,21 @@
 'use strict'
 
 function box (element, date) {
-  var date = new Date(2020, 11, date);
+  var date = new Date(2020, 10, date);
   var isOpen = false;
   var isLocked = true;
+  var gift = gifts.get(date.getDate());
+  element.dataset.date = date.getDate();
+  var img = document.createElement('img');
+  img.src = "graphic/img/dates/" + date.getDate() + ".png";
+  img.classList.add('date');
+  element.appendChild(img);
 
-  element.textContent = date.getDate();
 
   return {
+    get gift () {
+      return gift;
+    },
     get isOpen () {
       return isOpen;
     },
@@ -32,6 +40,9 @@ function box (element, date) {
         isOpen = true;
         this.element.classList.add('open');
         this.element.classList.remove('unlocked');
+        // change image to show the gift
+        var img = this.element.firstElementChild;
+        img.src = boxes[date.getDate() - 1].gift.src;
         return true;
       }
       return false;

@@ -6,6 +6,8 @@ if (state) {
     box.unlock();
     if (state[i].open) {
       box.open();
+      box.element.removeEventListener('click', openBox);
+      box.element.addEventListener('click', openGift);
     }
   });
 }

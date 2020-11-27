@@ -16,7 +16,7 @@ var translateMonth = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugn
    var month = translateMonth[date.getMonth()];
    var year = (date.getYear() + 1900).toString();
 
-   return `${day} ${month} ${year}`.toUpperCase();
+   return `${day} ${month} ${year}`;
  }
 
 function timeDifference (targetDate) {
@@ -37,7 +37,7 @@ function timeDifference (targetDate) {
 
 function updateTimer() {
   currentDate.textContent = parseDate(new Date(Date.now()));
-  countdown.textContent = `${timeDifference(xmas).days} GIORNI, ${timeDifference(xmas).hours} ORE,
-  ${timeDifference(xmas).mins} MINUTI, ${timeDifference(xmas).seconds} SECONDI`;
+  countdown.textContent = `${timeDifference(xmas).days} giorni, ${timeDifference(xmas).hours} ore,
+  ${timeDifference(xmas).mins} minuti, ${timeDifference(xmas).seconds} secondi`;
   requestAnimationFrame(updateTimer);
 }

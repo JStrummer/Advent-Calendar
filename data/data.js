@@ -6,7 +6,7 @@ function checkData() {
   if (localStorage.getItem('userName')) {
     updateGreetings();
     // retrieve state from localStorage
-    return getState(localStorage.getItem('state'));;
+    return getState(localStorage.getItem('state'));
   }
   return false;
 }
@@ -41,6 +41,7 @@ function getState (state) {
 
 function updateGreetings () {
   // customize welcome message
-  greetings.textContent = 'CIAO ' + localStorage.getItem('userName');
+  greetings.textContent = 'Ciao ' + localStorage.getItem('userName') + '!';
+  greetings.style.display = "block";
   submitNameForm.style.display = 'none';
 }

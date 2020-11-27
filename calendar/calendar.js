@@ -7,6 +7,7 @@ for (let i = 1; i < 25; i++) {
   var boxElement = document.createElement("div");
   calendar.appendChild(boxElement);
   boxElement.classList.add('box');
+
   boxes.push(box(boxElement, i));
   let currentBox = boxes[boxes.length - 1];
   if (currentBox.unlock()) {
@@ -16,11 +17,22 @@ for (let i = 1; i < 25; i++) {
 
 function openBox (evt) {
   if (state) {
-    var box = evt.target;
-    var index = box.textContent - 1;
+    // open box
+    var box = evt.currentTarget;
+    var index = box.dataset.date - 1;
     boxes[index].open();
+
     state = saveState();
     localStorage.setItem('state', state);
+
     box.removeEventListener('click', openBox);
+    box.addEventListener('click', openGift);
   }
+}
+
+function openGift (evt) {
+  var box = evt.currentTarget;
+  var index = box.dataset.date - 1;
+  console.log(boxes[index]);
+  boxes[index].gift.show();
 }

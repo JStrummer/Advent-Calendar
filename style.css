@@ -8,7 +8,9 @@ html {
 /* general settings */
 body {
   overflow: hidden;
-  font-family: serif;
+  font-family: 'Italianno', cursive;
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 
 body,
@@ -27,18 +29,28 @@ ul {
   margin: 0;
 }
 
+.text {
+  margin: 0 auto;
+}
+
 label,
 li {
   display: inline-block;
 }
 
-#header {
-  font-size: 0.7rem;
-  background-color: red;
+#submitNameBtn,
+#name {
+  font-family: 'Italianno', cursive;
+  font-weight: 300;
+  font-size: 1.2rem;
+  border-width: 0;
+  border-style: none;
+  background-color: green;
+  color: white;
 }
 
-#header > div {
-  padding: 5px 0;
+#header {
+  background-color: red;
 }
 
 #greetings {
@@ -62,9 +74,9 @@ li {
 
 /* styling box statuses */
 .box {
-  /*background-color: blue;*/
+  background-color: blue;
   border: none;
-  border-radius: 50%;
+  border-radius: 15px;
 }
 .box.unlocked {
   box-shadow: 0 0 25px 5px white, 0 0 25px 5px grey, 0 0 25px 5px white, 0 0 25px 5px white;
@@ -72,4 +84,34 @@ li {
 
 .box.open {
   background-color: green;
+}
+
+img.date {
+  width: 50%;
+}
+
+#gift-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+#gift {
+  width: 100%;
+}
+
+#close-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-family: sans-serif;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+  background-color: white;
+}
+
+#close-button:hover {
+  cursor: pointer;
 }
