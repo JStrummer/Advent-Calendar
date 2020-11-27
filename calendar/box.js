@@ -1,16 +1,22 @@
 'use strict'
 
 function box (element, date) {
-  var date = new Date(2020, 10, date);
+  var date = new Date(2020, 11, date);
   var isOpen = false;
   var isLocked = true;
   var gift = gifts.get(date.getDate());
   element.dataset.date = date.getDate();
+  // setting image for the date
   var img = document.createElement('img');
   img.src = "graphic/img/dates/" + date.getDate() + ".png";
   img.classList.add('date');
-  element.appendChild(img);
+  // setting image for the gift
+  var giftImage = document.createElement('img');
+  giftImage.classList.add('giftImage');
+  giftImage.src = "graphic/img/santa.png";
 
+  element.appendChild(img);
+  element.appendChild(giftImage);
 
   return {
     get gift () {

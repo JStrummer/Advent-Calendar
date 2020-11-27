@@ -86,8 +86,24 @@ li {
   background-color: green;
 }
 
-img.date {
+img {
   width: 50%;
+}
+
+img.date {
+  position: relative;
+  left: 25%;
+}
+
+.giftImage {
+  position: relative;
+  right: 25%;
+  opacity: 0;
+}
+
+.giftImage.show {
+  opacity: 100;
+  transition: opacity 1s linear;
 }
 
 #gift-container {

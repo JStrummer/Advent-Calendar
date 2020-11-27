@@ -32,7 +32,7 @@ function openBox (evt) {
 
 function openGift (evt) {
   var box = evt.currentTarget;
+  
   var index = box.dataset.date - 1;
-  console.log(boxes[index]);
   boxes[index].gift.show();
 }
