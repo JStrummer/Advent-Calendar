@@ -38,7 +38,3 @@ gifts.set(21, {src: "graphic/img/santa.png", show: showGift});
 gifts.set(22, {src: "graphic/img/santa.png", show: showGift});
 gifts.set(23, {src: "graphic/img/santa.png", show: showGift});
 gifts.set(24, {src: "graphic/img/santa.png", show: showGift});
-
-function createModal () {
-
-}

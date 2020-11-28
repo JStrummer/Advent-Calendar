@@ -1,19 +1,20 @@
 'use strict'
 
 function box (element, date) {
-  var date = new Date(2020, 11, date);
+  var date = new Date(2020, 10, date);
+  var day = date.getDate();
   var isOpen = false;
   var isLocked = true;
-  var gift = gifts.get(date.getDate());
-  element.dataset.date = date.getDate();
+  var gift = gifts.get(day);
+  element.dataset.date = day;
   // setting image for the date
   var img = document.createElement('img');
-  img.src = "graphic/img/dates/" + date.getDate() + ".png";
+  img.src = "graphic/img/dates/" + day + ".png";
   img.classList.add('date');
   // setting image for the gift
   var giftImage = document.createElement('img');
   giftImage.classList.add('giftImage');
-  giftImage.src = "graphic/img/santa.png";
+  giftImage.src = gift.src;
 
   element.appendChild(img);
   element.appendChild(giftImage);
@@ -47,8 +48,8 @@ function box (element, date) {
         this.element.classList.add('open');
         this.element.classList.remove('unlocked');
         // change image to show the gift
-        var img = this.element.firstElementChild;
-        img.src = boxes[date.getDate() - 1].gift.src;
+        img.style.display = 'none';
+        giftImage.classList.add('show');
         return true;
       }
       return false;

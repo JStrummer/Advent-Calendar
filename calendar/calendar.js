@@ -16,14 +16,13 @@ for (let i = 1; i < 25; i++) {
  }
 
 function openBox (evt) {
-  if (state) {
+  if (state.data.saved) {
     // open box
     var box = evt.currentTarget;
     var index = box.dataset.date - 1;
     boxes[index].open();
 
-    state = saveState();
-    localStorage.setItem('state', state);
+    state.save();
 
     box.removeEventListener('click', openBox);
     box.addEventListener('click', openGift);
@@ -32,7 +31,7 @@ function openBox (evt) {
 
 function openGift (evt) {
   var box = evt.currentTarget;
-  
+
   var index = box.dataset.date - 1;
   boxes[index].gift.show();
 }
