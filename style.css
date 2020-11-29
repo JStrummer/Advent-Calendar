@@ -121,6 +121,7 @@ img.previewGift.show {
 
 #close-button {
   position: fixed;
+  z-index: 1;
   top: 0;
   right: 0;
   font-family: sans-serif;

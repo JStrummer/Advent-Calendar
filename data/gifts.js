@@ -104,13 +104,18 @@ gifts.set(24, {
 function showGift () {
   var giftContainer = document.querySelector('#gift-container');
   var closeBtn = document.querySelector('#close-button');
+  var giftImage = document.querySelector('img.gift');
+  var giftVideo = document.querySelector('video.gift')
 
   if (this.type == 'image') {
-    let giftImage = document.querySelector('img.gift');
     giftImage.src = this.src;
+    giftImage.style.display = 'block';
+    giftVideo.style.display = 'none';
   } else if (this.type == 'video') {
-    let giftVideo = document.querySelector('video.gift')
     giftVideo.src = this.src;
+    giftVideo.style.display = 'block';
+    giftVideo.style.display = 'block';
+    giftImage.style.display = 'none';
   }
 
   giftContainer.style.display = "block";
