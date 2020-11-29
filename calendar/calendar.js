@@ -4,19 +4,13 @@ var boxes = [];
 
 //create boxes
 for (let i = 1; i < 25; i++) {
-  var boxElement = document.createElement("div");
-  calendar.appendChild(boxElement);
+  let boxElement = document.createElement("div");
   boxElement.classList.add('box');
-
   boxes.push(box(boxElement, i));
-  let currentBox = boxes[boxes.length - 1];
-  if (currentBox.unlock()) {
-    boxElement.addEventListener('click', openBox);
-  }
  }
 
 function openBox (evt) {
-  if (state.data.saved) {
+  if (state.saved) {
     // open box
     var box = evt.currentTarget;
     var index = box.dataset.date - 1;
@@ -31,7 +25,6 @@ function openBox (evt) {
 
 function openGift (evt) {
   var box = evt.currentTarget;
-
   var index = box.dataset.date - 1;
   boxes[index].gift.show();
 }

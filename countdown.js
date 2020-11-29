@@ -6,18 +6,18 @@ var translateMonth = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugn
  'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'];
 
 // value in milliseconds
- var sec = 1000;
- var min = sec * 60;
- var hour = min * 60;
- var day = hour * 24;
+var sec = 1000;
+var min = sec * 60;
+var hour = min * 60;
+var day = hour * 24;
 
- function parseDate (date) {
-   var day = date.getDate().toString();
-   var month = translateMonth[date.getMonth()];
-   var year = (date.getYear() + 1900).toString();
+function parseDate (date) {
+  var day = date.getDate().toString();
+  var month = translateMonth[date.getMonth()];
+  var year = (date.getYear() + 1900).toString();
 
-   return `${day} ${month} ${year}`;
- }
+  return `${day} ${month} ${year}`;
+}
 
 function timeDifference (targetDate) {
   var difference = targetDate - Date.now();
@@ -36,6 +36,8 @@ function timeDifference (targetDate) {
 }
 
 function updateTimer() {
+  var currentDate = document.querySelector('#current-date');
+  var countdown = document.querySelector('#countdown');
   currentDate.textContent = parseDate(new Date(Date.now()));
   countdown.textContent = `${timeDifference(xmas).days} giorni, ${timeDifference(xmas).hours} ore,
   ${timeDifference(xmas).mins} minuti, ${timeDifference(xmas).seconds} secondi`;

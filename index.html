@@ -9,6 +9,11 @@
     <title>CALENDARIO DELL'AVVENTO</title>
   </head>
   <body>
+    <div id="assets" style="display: none">
+      <audio id="single-bell" src="data/sound/single_bell_ring.mp3" preload="auto"></audio>
+      <audio id="gliss" src="data/sound/gliss.mp3" preload="auto"></audio>
+    </div>
+
     <div id="app">
       <div id="header">
 
@@ -42,11 +47,13 @@
       </div>
       <div id="gift-container">
         <div id="close-button">X</div>
-        <img id="gift">
+        <img class="gift">
+        <video class="gift" controls preload="metadata"></video>
       </div>
     </div>
 
-    <script src="data/html-element.js" charset="utf-8"></script>
+    <script src="data/helper.js" charset="utf-8"></script>
+    <script src="data/sound/sound.js" charset="utf-8"></script>
     <script src="data/data.js" charset="utf-8"></script>
     <script src="data/gifts.js" charset="utf-8"></script>
     <script src="graphic/resize.js" charset="utf-8"></script>

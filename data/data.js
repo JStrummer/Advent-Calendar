@@ -1,43 +1,46 @@
 'use strict'
 
-var state = {
-  data: {
-    userName: '',
-    saved: null
-  },
+function fetchState () {
 
-  check () {
-    if (localStorage.getItem('userName')) {
-      updateGreetings();
-      // retrieve state from localStorage
-      return getState(localStorage.getItem('state'));
+    var userName = '';
+    var saved = null;
+
+  return {
+    get userName () {
+      return userName;
+    },
+    get saved () {
+      return saved;
+    },
+    check () {
+      if (localStorage.getItem('userName')) {
+        updateGreetings(userName);
+        // retrieve state from localStorage
+        return getState(localStorage.getItem('state'));
+      }
+      return false;
+    },
+    getData () {
+      let savedData = localStorage.getItem('state');
+      if (savedData) {
+        let data = JSON.parse(savedData);
+        userName = data.userName;
+        data.saved ? saved = data.saved : saved;
+        return true;
+      }
+      return false;
+    },
+    save () {
+      if (userName) {
+        let data = {userName: userName};
+        data.saved = [];
+        boxes.forEach( (box) => {
+          data.saved.push({open: box.isOpen});
+        });
+        localStorage.setItem('state', JSON.stringify(data));
+        return true;
+      }
+      return false;
     }
-    return false;
-  },
-  getData () {
-    let savedData = localStorage.getItem('state');
-    if (savedData) {
-      this.data = JSON.parse(savedData);
-      return true;
-    }
-    return false;
-  },
-  save () {
-    if (this.data.userName) {
-      this.data.saved = [];
-      boxes.forEach( (box) => {
-        this.data.saved.push({open: box.isOpen});
-      });
-      localStorage.setItem('state', JSON.stringify(this.data));
-      return true;
-    }
-    return false;
   }
-}
-
-function updateGreetings () {
-  // customize welcome message
-  greetings.textContent = 'Ciao ' + state.data.userName + '!';
-  greetings.style.display = "block";
-  submitNameForm.style.display = 'none';
 }

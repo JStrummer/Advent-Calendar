@@ -8,16 +8,16 @@ function box (element, date) {
   var gift = gifts.get(day);
   element.dataset.date = day;
   // setting image for the date
-  var img = document.createElement('img');
-  img.src = "graphic/img/dates/" + day + ".png";
-  img.classList.add('date');
-  // setting image for the gift
-  var giftImage = document.createElement('img');
-  giftImage.classList.add('giftImage');
-  giftImage.src = gift.src;
+  var dateImage = document.createElement('img');
+  dateImage.src = "graphic/img/dates/" + day + ".png";
+  dateImage.classList.add('date');
+  // setting image for the gift when box is open
+  var previewGift = document.createElement('img');
+  previewGift.classList.add('previewGift');
+  previewGift.src = gift.preview;
 
-  element.appendChild(img);
-  element.appendChild(giftImage);
+  element.appendChild(dateImage);
+  element.appendChild(previewGift);
 
   return {
     get gift () {
@@ -39,8 +39,18 @@ function box (element, date) {
       if (isLocked && checkDate()) {
         isLocked = false;
         this.element.classList.add('unlocked');
+        this.element.addEventListener('click', openBox);
+        return true;
       }
-      return !isLocked;
+      return false;
+      // check if you can open the box
+      function checkDate () {
+        if (Date.now() >= date) {
+          return true;
+        } else {
+          return false;
+        }
+      }
     },
     open () {
       if (!isLocked && !isOpen) {
@@ -48,19 +58,12 @@ function box (element, date) {
         this.element.classList.add('open');
         this.element.classList.remove('unlocked');
         // change image to show the gift
-        img.style.display = 'none';
-        giftImage.classList.add('show');
+        dateImage.style.display = 'none';
+        previewGift.classList.add('show');
+        this.element.removeEventListener('click', openBox);
+        this.element.addEventListener('click', openGift);
         return true;
       }
-      return false;
-    }
-  }
-
-  // check if you can open the box
-  function checkDate () {
-    if (Date.now() >= date) {
-      return true;
-    } else {
       return false;
     }
   }
