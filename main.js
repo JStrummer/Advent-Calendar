@@ -28,7 +28,7 @@ if (state.getData()) {
   function submitName (evt) {
     var name = inputName.value;
     if (name) {
-      let data = {userName: name};
+      let data = {userName: name, saved: []};
       localStorage.setItem('state', JSON.stringify(data));
       state.getData();
       state.save();

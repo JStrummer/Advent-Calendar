@@ -25,7 +25,7 @@ function fetchState () {
       if (savedData) {
         let data = JSON.parse(savedData);
         userName = data.userName;
-        data.saved ? saved = data.saved : saved;
+        data.saved ? saved = data.saved : saved = null;
         return true;
       }
       return false;
