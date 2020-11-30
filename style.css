@@ -115,17 +115,8 @@ img.previewGift.show {
   background-color: red;
 }
 
-
-@media only screen and (width < height) {
-  .gift {
-    width: 100vw;
-  }
-}
-
-@media only screen and (height < width) {
-  .gift {
-    height: 100vh;
-  }
+.gift {
+  width: 100%;
 }
 
 #close-button {
