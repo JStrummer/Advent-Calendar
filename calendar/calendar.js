@@ -1,7 +1,7 @@
 'use strict'
 
 function box (element, date) {
-  var date = new Date(2020, 10, date);
+  var date = new Date(2020, 11, date);
   var day = date.getDate();
   var isOpen = false;
   var isLocked = true;
@@ -11,12 +11,12 @@ function box (element, date) {
   var dateImage = document.createElement('img');
   dateImage.src = "graphic/img/dates/" + day + ".png";
   dateImage.classList.add('date');
+  element.appendChild(dateImage);
+
   // setting image for the gift when box is open
   var previewGift = document.createElement('img');
   previewGift.classList.add('previewGift');
   previewGift.src = gift.preview;
-
-  element.appendChild(dateImage);
   element.appendChild(previewGift);
 
   return {

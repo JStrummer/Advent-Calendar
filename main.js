@@ -15,12 +15,13 @@ var boxes = [];
 for (let i = 1; i < 25; i++) {
   let boxElement = document.createElement("div");
   boxElement.classList.add('box');
+  calendar.appendChild(boxElement);
   boxes.push(box(boxElement, i));
 }
 // adding boxes elements to calendar
-boxes.forEach((box, i) => {
+/*boxes.forEach((box, i) => {
   calendar.appendChild(box.element);
-});
+});*/
 // checking if exists data from previous sections
 if (state.getData()) {
   // if data exists

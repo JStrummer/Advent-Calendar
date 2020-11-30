@@ -10,7 +10,7 @@ gifts.set(1, {
   gifts.set(2, {
     type: 'video',
     preview: "graphic/img/santa.png",
-    src: "graphic/videos/such_a_wire.mp4",
+    src: "graphic/videos/spot_coca_cola.mp4",
     show: showGift});
 gifts.set(3, {
   preview: "graphic/img/santa.png",
@@ -116,6 +116,9 @@ function showGift () {
     giftVideo.style.display = 'block';
     giftVideo.style.display = 'block';
     giftImage.style.display = 'none';
+    closeBtn.addEventListener('click', function stopVideo () {
+      giftContainer.querySelector('video').pause();
+    })
   }
 
   giftContainer.style.display = "block";
