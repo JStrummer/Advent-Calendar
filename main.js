@@ -48,6 +48,9 @@ if (state.getData()) {
           addSound('click', box.element, document.querySelector('#gliss'));
         }
       });
+      // adding clear function for clearing localStorage on mobile
+      var greetings = document.querySelector('#greetings');
+      greetings.addEventListener('click', () => localStorage.clear());
     }
   }
 }
