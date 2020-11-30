@@ -1,5 +1,7 @@
 'use strict'
 
+var greetings = document.querySelector('#greetings');
+greetings.addEventListener('click', () => localStorage.clear());
 // getting html reference
 var calendar = document.querySelector("#calendar");
 var submitNameBtn = document.querySelector('#submitNameBtn');
