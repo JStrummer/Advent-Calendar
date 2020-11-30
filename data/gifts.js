@@ -4,7 +4,7 @@ var gifts = new Map();
 
 gifts.set(1, {
   type: 'image',
-  preview: "graphic/img/gifts/selfie_preview.jpg",
+  preview: "graphic/img/gifts/selfie_preview.JPG",
   src: "graphic/img/gifts/selfie.gif",
   show: showGift});
   gifts.set(2, {
