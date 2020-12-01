@@ -4,6 +4,9 @@
 var greetings = document.querySelector('#greetings');
 greetings.addEventListener('click', () => localStorage.clear());
 
+let music = document.querySelector('#jingle_bells');
+//music.play();
+
 // getting html reference
 var calendar = document.querySelector("#calendar");
 var submitNameBtn = document.querySelector('#submitNameBtn');

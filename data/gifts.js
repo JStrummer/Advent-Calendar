@@ -9,12 +9,13 @@ gifts.set(1, {
   show: showGift});
   gifts.set(2, {
     type: 'video',
-    preview: "graphic/img/santa.png",
+    preview: "graphic/videos/spot_coca_cola_preview.JPG",
     src: "graphic/videos/spot_coca_cola.mp4",
     show: showGift});
 gifts.set(3, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/last_xmas.JPG",
+  src: "graphic/videos/last_xmas.mp4",
   show: showGift});
 gifts.set(4, {
   preview: "graphic/img/santa.png",
