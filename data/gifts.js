@@ -14,7 +14,7 @@ gifts.set(1, {
     show: showGift});
 gifts.set(3, {
   type: 'video',
-  preview: "graphic/videos/last_xmas.JPG",
+  preview: "graphic/videos/last_xmas.jpg",
   src: "graphic/videos/last_xmas.mp4",
   show: showGift});
 gifts.set(4, {
