@@ -9,7 +9,7 @@ gifts.set(1, {
   show: showGift});
   gifts.set(2, {
     type: 'video',
-    preview: "graphic/videos/spot_coca_cola_preview.JG",
+    preview: "graphic/videos/spot_coca_cola_preview.jpg",
     src: "graphic/videos/spot_coca_cola.mp4",
     show: showGift});
 gifts.set(3, {
