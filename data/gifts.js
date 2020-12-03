@@ -14,16 +14,18 @@ gifts.set(1, {
     show: showGift});
 gifts.set(3, {
   type: 'video',
-  preview: "graphic/videos/last_xmas.jpg",
+  preview: "graphic/videos/last_xmas_preview.jpg",
   src: "graphic/videos/last_xmas.mp4",
   show: showGift});
 gifts.set(4, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/all_i_want_for_xmas_preview.jpg",
+  src: "graphic/videos/all_i_want_for_xmas.mp4",
   show: showGift});
 gifts.set(5, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/deck_the_hall_preview.jpg",
+  src: "graphic/videos/deck_the_hall.mp4",
   show: showGift});
 gifts.set(6, {
   preview: "graphic/img/santa.png",
