@@ -4,6 +4,9 @@
 var greetings = document.querySelector('#greetings');
 greetings.addEventListener('click', () => localStorage.clear());
 
+// create timer instance
+var timer = timer();
+
 let music = document.querySelector('#jingle_bells');
 //music.play();
 
@@ -22,9 +25,6 @@ for (let i = 1; i < 25; i++) {
   boxes.push(box(boxElement, i));
 }
 // adding boxes elements to calendar
-/*boxes.forEach((box, i) => {
-  calendar.appendChild(box.element);
-});*/
 // checking if exists data from previous sections
 if (state.getData()) {
   // if data exists
@@ -63,6 +63,7 @@ if (state.getData()) {
   }
 }
 
-updateTimer();
+// starting timer
+timer.start();
 resize();
 window.onresize = resize;
