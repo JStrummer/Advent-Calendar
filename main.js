@@ -4,16 +4,17 @@
 var greetings = document.querySelector('#greetings');
 greetings.addEventListener('click', () => localStorage.clear());
 
-// create timer instance
-var timer = timer();
 
-let music = document.querySelector('#jingle_bells');
+var music = document.querySelector('#jingle_bells');
 //music.play();
 
 // getting html reference
 var calendar = document.querySelector("#calendar");
 var submitNameBtn = document.querySelector('#submitNameBtn');
 var inputName = document.querySelector('input#name');
+
+// create timer instance
+var timer = timer();
 // create state instance
 var state = fetchState();
 // create box objects
