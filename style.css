@@ -129,6 +129,7 @@ img.previewGift.show {
   padding: 5px;
   margin: 5px;
   background-color: white;
+  font-size: 1rem;  
 }
 
 #close-button:hover {

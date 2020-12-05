@@ -28,12 +28,14 @@ gifts.set(5, {
   src: "graphic/videos/deck_the_hall.mp4",
   show: showGift});
 gifts.set(6, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/love_actually.jpg",
+  src: "graphic/videos/love_actually.mp4",
   show: showGift});
 gifts.set(7, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/Bridget.jpg",
+  src: "graphic/videos/Bridget.mp4",
   show: showGift});
 gifts.set(8, {
   preview: "graphic/img/santa.png",
