@@ -38,24 +38,29 @@ gifts.set(7, {
   src: "graphic/videos/Bridget.mp4",
   show: showGift});
 gifts.set(8, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/botox.jpg",
+  src: "graphic/videos/botox.mp4",
   show: showGift});
 gifts.set(9, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/love_actually_2.jpg",
+  src: "graphic/videos/love_actually_2_hd.mp4",
   show: showGift});
 gifts.set(10, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/elfo.jpg",
+  src: "graphic/videos/elfo.mp4",
   show: showGift});
 gifts.set(11, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/bistefani.jpg",
+  src: "graphic/videos/bistefani.mp4",
   show: showGift});
 gifts.set(12, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/bauli.jpg",
+  src: "graphic/videos/bauli.mp4",
   show: showGift});
 gifts.set(13, {
   preview: "graphic/img/santa.png",
