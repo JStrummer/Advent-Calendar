@@ -63,8 +63,9 @@ gifts.set(12, {
   src: "graphic/videos/bauli.mp4",
   show: showGift});
 gifts.set(13, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/jump.jpg",
+  src: "graphic/videos/jump.mp4",
   show: showGift});
 gifts.set(14, {
   preview: "graphic/img/santa.png",
