@@ -68,16 +68,19 @@ gifts.set(13, {
   src: "graphic/videos/jump.mp4",
   show: showGift});
 gifts.set(14, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/moderno.jpg",
+  src: "graphic/videos/moderno.mp4",
   show: showGift});
 gifts.set(15, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/bowie_bing.jpg",
+  src: "graphic/videos/bowie_bing.mp4",
   show: showGift});
 gifts.set(16, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/buble.jpg",
+  src: "graphic/videos/buble.mp4",
   show: showGift});
 gifts.set(17, {
   preview: "graphic/img/santa.png",
