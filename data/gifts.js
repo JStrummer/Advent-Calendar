@@ -83,12 +83,14 @@ gifts.set(16, {
   src: "graphic/videos/buble.mp4",
   show: showGift});
 gifts.set(17, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/jingle_bell_rock.jpg",
+  src: "graphic/videos/jingle_bell_rock.mp4",
   show: showGift});
 gifts.set(18, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/rock_around.jpg",
+  src: "graphic/videos/rock_around.mp4",
   show: showGift});
 gifts.set(19, {
   preview: "graphic/img/santa.png",
