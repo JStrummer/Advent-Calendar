@@ -93,16 +93,19 @@ gifts.set(18, {
   src: "graphic/videos/rock_around.mp4",
   show: showGift});
 gifts.set(19, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/celtic.jpg",
+  src: "graphic/videos/celtic.mp4",
   show: showGift});
 gifts.set(20, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/jackson5.jpg",
+  src: "graphic/videos/jackson5.mp4",
   show: showGift});
 gifts.set(21, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/legend.jpg",
+  src: "graphic/videos/legend.mp4",
   show: showGift});
 gifts.set(22, {
   preview: "graphic/img/santa.png",
