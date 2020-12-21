@@ -108,16 +108,19 @@ gifts.set(21, {
   src: "graphic/videos/legend.mp4",
   show: showGift});
 gifts.set(22, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/band_aid.jpg",
+  src: "graphic/videos/band_aid.mp4",
   show: showGift});
 gifts.set(23, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/a_natale_puoi.jpg",
+  src: "graphic/videos/a_natale_puoi.mp4",
   show: showGift});
 gifts.set(24, {
-  preview: "graphic/img/santa.png",
-  src: "graphic/img/santa.png",
+  type: 'video',
+  preview: "graphic/videos/carboni_jova.jpg",
+  src: "graphic/videos/carboni_jova.mp4",
   show: showGift});
 
 function showGift () {
